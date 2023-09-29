@@ -1,0 +1,227 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: roboto, Arial, Helvetica, sans-serif;
+}
+html {
+  background-color: #181a1b;
+}
+.container {
+  display: grid;
+  grid-template: auto 1fr / 1fr;
+  grid-template-areas:
+    "header"
+    "mainContent";
+  color: #fff;
+}
+
+.mainContent {
+  grid-area: mainContent;
+  display: grid;
+  padding: 2rem;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+
+.header {
+  grid-area: header;
+  background-color: #5b25d6;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+.projectName {
+  font-size: 1.5rem;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.userInfo {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.addButton {
+  background-color: #1a73e8;
+  padding: 2rem 4rem;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.resetButton {
+  padding: 1.5rem 3rem;
+  border-radius: 50px;
+  background-color: #941c03;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+}
+
+.buttons {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+img {
+  max-height: 200px;
+  min-height: 100px;
+}
+
+.newBook {
+  display: flex;
+  border: 5px outset #fff;
+  border-radius: 50px;
+  padding: 2rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bookInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 25ch;
+}
+
+.mainContent button {
+  padding: 0.5rem;
+  width: max-content;
+  border-radius: 50px;
+
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+}
+
+button:hover {
+  filter: brightness(110%);
+  font-weight: bold;
+}
+
+.editButton {
+  background-color: #4aa303;
+}
+.removeButton {
+  background-color: #941c03;
+}
+
+#addNewBook {
+  width: 40%;
+  height: 80%;
+  position: absolute;
+  float: left;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 30px;
+  background-color: black;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(5px);
+}
+
+#addNewBook form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  height: 60%;
+  width: 60%;
+
+  margin: auto;
+}
+#addNewBook form input {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  display: flex;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#addNewBook label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#addNewBook h1 {
+  color: #fff;
+  font-family: roboto;
+  text-align: center;
+  padding: 3rem;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.modalButtons button {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+}
+
+#confirmBtn {
+  background-color: #4aa303;
+}
+#cancelButton {
+  background-color: #941c03;
+}
+input [type="radio"] {
+  color: #fff;
+}
+label,
+fieldset {
+  color: #fff;
+}
+
+.radio {
+  display: flex;
+  gap: 2rem;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+output {
+  color: #fff;
+}
+.finished {
+  border: 10px outset #1a73e8;
+}
+
+.unfinished {
+  border: 5px outset #941c03;
+}

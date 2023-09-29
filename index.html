@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project - Library</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="projectName">
+          <h1>Library</h1>
+        </div>
+        <div class="buttons">
+          <button class="addButton">adicionar livro</button>
+          <button class="resetButton">resetar</button>
+        </div>
+
+        <div class="userInfo">
+          <h3 class="totalBooks">Total de livros:</h3>
+
+          <h3 class="totalRead">Livros terminados:</h3>
+          <h3 class="totalNotRead">Livros não terminados:</h3>
+        </div>
+      </div>
+
+      <div class="mainContent"></div>
+
+      <dialog id="addNewBook">
+        <h1>Adicionar livro</h1>
+        <form>
+          <input
+            type="text"
+            placeholder="Nome do livro"
+            class="inputBookName"
+            minlength="4"
+            maxlength="80"
+            required
+          />
+
+          <input
+            type="text"
+            placeholder="Autor"
+            class="inputAuthorName"
+            minlength="5"
+            maxlength="30"
+            required
+          />
+          <input
+            type="text"
+            class="inputNumberOfPages"
+            pattern="[0-9]{1,4}"
+            placeholder="Número de paginas"
+            required
+          />
+
+          <input
+            type="text"
+            placeholder="URL da capa"
+            minlength="5"
+            class="inputBookcover"
+            maxlength="10000"
+          />
+          <div class="radio">
+            <h2>Você leu o livro?</h2>
+            <div>
+              <input
+                type="radio"
+                id="haveReadRadio"
+                name="haveReadRadio"
+                value="Já li"
+              />
+              <label for="haveReadRadio">Sim</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="haventReadRadio"
+                name="haveReadRadio"
+                value="Não li"
+              />
+              <label for="haventReadRadio">Não</label>
+            </div>
+          </div>
+
+          <div>
+            <div class="modalButtons">
+              <button type="submit" id="confirmBtn">Confirmar</button>
+              <button
+                id="cancelButton"
+                value="cancel"
+                type="button"
+                formmethod="dialog"
+              >
+                Cancelar
+              </button>
+            </div>
+          </div>
+        </form>
+      </dialog>
+    </div>
+    <output class></output>
+
+    <script src="script.js"></script>
+  </body>
+</html>
